@@ -304,7 +304,8 @@ hr {
     display: none;
   }
 }
-.main-menu a {
+.main-menu a,
+a:visited {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: normal;
@@ -461,8 +462,8 @@ a:visited:hover {
 #balconies {
   background-image: linear-gradient(rgba(112, 112, 112, 0.4), rgba(112, 112, 112, 0.4)), url(../images/balconies.jpg);
 }
-#services a,
-a:visited {
+#services > section a,
+#services > section a:visited {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: normal;
@@ -477,15 +478,15 @@ a:visited {
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.68);
 }
 @media (max-width: 991px) and (min-width: 576px) {
-  #services a,
-  a:visited {
+  #services > section a,
+  #services > section a:visited {
     font-size: 56px;
     line-height: 350px;
   }
 }
 @media (max-width: 575px) {
-  #services a,
-  a:visited {
+  #services > section a,
+  #services > section a:visited {
     font-size: 36px;
     line-height: 200px;
   }
