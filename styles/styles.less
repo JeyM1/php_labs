@@ -587,5 +587,23 @@ hr {
 }
 
 #footer .social-links {
-    
+    bottom: 45px;
+}
+
+#mob-social-links {
+    @media (min-width: 992px) {
+        display: none;
+    }
+    @media (max-width: 991px) {
+        display: flex;
+    }
+    position: relative;
+    top: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+    a {
+        text-decoration: none;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }

@@ -593,3 +593,27 @@ hr {
 #footer .logo-icon {
   top: 0px;
 }
+#footer .social-links {
+  bottom: 45px;
+}
+#mob-social-links {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  #mob-social-links {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  #mob-social-links {
+    display: flex;
+  }
+}
+#mob-social-links a {
+  text-decoration: none;
+  margin-left: 25px;
+  margin-right: 25px;
+}
