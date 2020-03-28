@@ -142,6 +142,7 @@ hr {
   color: #F5F5F5;
   font-weight: 600;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 991px) and (min-width: 576px) {
   .main-button {
@@ -158,6 +159,14 @@ hr {
     font-size: 26px;
     border-radius: 10px;
   }
+}
+.main-button:hover {
+  cursor: pointer;
+  border: 3px solid #FF6B00;
+  background-color: rgba(220, 229, 231, 0.6);
+  color: #FF6B00;
+  transform: translateY(-5px);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 .logo-icon {
   position: absolute;
@@ -204,9 +213,14 @@ hr {
 #header {
   background-color: #F5F5F5;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #header {
     height: 200px;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  #header {
+    height: 175px;
   }
 }
 @media (max-width: 991px) {
@@ -267,7 +281,6 @@ hr {
 }
 .mobile-selector {
   position: absolute;
-  right: 0px;
   top: 15px;
 }
 @media (min-width: 992px) {
@@ -474,7 +487,7 @@ hr {
   text-align: center;
 }
 #windows {
-  background-image: linear-gradient(rgba(112, 112, 112, 0.35), rgba(112, 112, 112, 0.35)), url(../images/windows.jpg);
+  background-image: linear-gradient(rgba(112, 112, 112, 0.25), rgba(112, 112, 112, 0.25)), url(../images/windows.jpg);
 }
 #doors {
   background-image: linear-gradient(rgba(255, 107, 0, 0.4), rgba(255, 107, 0, 0.4)), url(../images/doors.jpg);
@@ -496,6 +509,7 @@ hr {
   font-weight: 600;
   text-decoration: none;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.68);
+  transition: 0.7s;
 }
 @media (max-width: 991px) and (min-width: 576px) {
   #services > section a,
@@ -513,11 +527,18 @@ hr {
 }
 #services > section {
   background-size: cover;
+  background-position: center;
   padding: 0;
 }
-/*#windows a:hover {
-
-}*/
+#windows a:hover {
+  background-color: #004287;
+}
+#doors a:hover {
+  background-color: #ff8933;
+}
+#balconies a:hover {
+  background-color: #5199FF;
+}
 /*  -------------------------------------
     |                                   |
     |            End section            |

@@ -147,6 +147,16 @@ hr {
         font-size: 26px;
         border-radius: 10px;
     }
+    transition: all 0.3s ease 0s;
+}
+
+.main-button:hover {
+    cursor: pointer;
+    border: 3px solid @orange-color;
+    background-color: fade(@blue-background, 60%);
+    color: @orange-color;
+    transform: translateY(-5px);
+    text-shadow: 2px 2px 5px fade(black, 25%);
 }
 
 .logo-icon {
@@ -192,9 +202,12 @@ hr {
     |                                   |
     -------------------------------------
 */
-#header {
-    @media (min-width: 992px) {
+#header { 
+    @media (min-width: 1200px){
         height: 200px;
+    }
+    @media (max-width: 1199px) and (min-width: 992px) {
+        height: 175px;
     }
     @media (max-width: 991px) {
         height: 75px;
@@ -270,8 +283,6 @@ hr {
     @media (max-width: 575px) {
         right: 20px;
     }
-
-    right: 0px;
     top: 15px;
 }
 
@@ -450,7 +461,7 @@ hr {
 }
 
 #windows {
-    background-image: linear-gradient(fade(@second-text-color, 35%),fade(@second-text-color, 35%)),
+    background-image: linear-gradient(fade(@second-text-color, 25%),fade(@second-text-color, 25%)),
                         url(../images/windows.jpg);
 }
 
@@ -475,6 +486,8 @@ hr {
     font-weight: 600;
     text-decoration: none;
     text-shadow: 0px 3px 6px fade(black, 68%);
+    
+    transition: 0.7s;
 
 
     @media (max-width: 991px) and (min-width: 576px) {
@@ -491,13 +504,21 @@ hr {
 
 #services>section {
     background-size: cover;
+    background-position: center;
     padding: 0;
 }
 
-/*#windows a:hover {
+#windows a:hover {
+    background-color: #004287;
+}
 
-}*/
+#doors a:hover {
+    background-color: lighten(@orange-color, 10%);
+}
 
+#balconies a:hover {
+    background-color: #5199FF;
+}
 
 /*  -------------------------------------
     |                                   |
