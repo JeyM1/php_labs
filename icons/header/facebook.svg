@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.8;
+      }
+
+      .cls-2 {
+        fill: #231f20;
+      }
+
+      .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #231f20;
+        stroke-linejoin: round;
+        stroke-width: 2.5px;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="header-facebook" class="cls-1" transform="translate(-1608.495 -32.432)">
+    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" class="cls-2" d="M12.823,12.6l.622-4.055H9.555V5.917a2.027,2.027,0,0,1,2.286-2.191h1.769V.274A21.57,21.57,0,0,0,10.47,0c-3.2,0-5.3,1.942-5.3,5.458v3.09H1.609V12.6H5.171v9.8H9.555V12.6Z" transform="translate(1616.161 38.549)"/>
+    <g id="back" class="cls-3" transform="translate(1608.495 32.432)">
+      <rect class="cls-4" width="30" height="30" rx="8"/>
+      <rect class="cls-5" x="1.25" y="1.25" width="27.5" height="27.5" rx="6.75"/>
+    </g>
+  </g>
+</svg>
