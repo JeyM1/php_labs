@@ -104,8 +104,8 @@ h4 {
   font-style: normal;
   font-weight: normal;
   font-weight: lighter;
-  font-size: 26px;
-  color: #231F20;
+  font-size: 24px;
+  color: #DCE5E7;
 }
 p {
   font-family: 'Segoe UI';
@@ -117,18 +117,19 @@ p {
 hr {
   width: 275px;
   border: none;
-  height: 1.5px;
+  height: 2px;
   color: #FF6B00;
   background-color: #FF6B00;
   box-shadow: 0 3px 7px rgba(255, 107, 0, 0.35);
   margin: 0 auto;
+  border-radius: 2px;
 }
 @media (max-width: 575px) {
   hr {
     width: 200px;
   }
 }
-#main-button {
+.main-button {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: normal;
@@ -141,24 +142,39 @@ hr {
   color: #F5F5F5;
   font-weight: 600;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-top: 115px;
 }
 @media (max-width: 991px) and (min-width: 576px) {
-  #main-button {
+  .main-button {
     width: 450px;
     height: 75px;
     font-size: 38px;
-    margin-top: 75px;
     border-radius: 20px;
   }
 }
 @media (max-width: 575px) {
-  #main-button {
+  .main-button {
     width: 250px;
     height: 50px;
     font-size: 26px;
-    margin-top: 45px;
     border-radius: 10px;
+  }
+}
+.logo-icon {
+  position: absolute;
+}
+@media (min-width: 992px) {
+  .logo-icon {
+    width: 235px;
+    height: 86px;
+    background-image: url(../icons/logo-header.svg);
+  }
+}
+@media (max-width: 991px) {
+  .logo-icon {
+    width: 170px;
+    height: 58px;
+    top: 10px;
+    background-image: url(../icons/mob-logo-header.svg);
   }
 }
 /*  -------------------------------------
@@ -198,23 +214,14 @@ hr {
     height: 75px;
   }
 }
-.header-icon {
-  position: absolute;
-}
 @media (min-width: 992px) {
-  .header-icon {
-    width: 235px;
-    height: 86px;
+  #header .logo-icon {
     top: 10px;
-    background-image: url(../icons/header/logo-header.svg);
   }
 }
 @media (max-width: 991px) {
-  .header-icon {
-    width: 170px;
-    height: 58px;
+  #header .logo-icon {
     top: 10px;
-    background-image: url(../icons/header/mob-logo-header.svg);
   }
 }
 #header a {
@@ -255,7 +262,7 @@ hr {
     display: none;
   }
 }
-.header-soc {
+#header .social-links {
   top: 45px;
 }
 .mobile-selector {
@@ -388,6 +395,19 @@ hr {
     top: 225px;
   }
 }
+#main .main-button {
+  margin-top: 115px;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  #main .main-button {
+    margin-top: 75px;
+  }
+}
+@media (max-width: 575px) {
+  #main .main-button {
+    margin-top: 45px;
+  }
+}
 /*  -------------------------------------
     |                                   |
     |          Why us section           |
@@ -498,3 +518,78 @@ hr {
 /*#windows a:hover {
 
 }*/
+/*  -------------------------------------
+    |                                   |
+    |            End section            |
+    |                                   |
+    -------------------------------------
+*/
+#end {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-image: url(../images/back.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#end p {
+  text-align: center;
+  color: #F5F5F5;
+}
+#end hr {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  color: #F5F5F5;
+  background-color: #F5F5F5;
+  box-shadow: none;
+}
+/*  -------------------------------------
+    |                                   |
+    |      End of landing section       |
+    |                                   |
+    -------------------------------------
+*/
+#end-landing {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: #DCE5E7;
+}
+#end-landing hr {
+  text-align: center;
+  margin-bottom: 35px;
+}
+#end-landing h1 {
+  text-align: center;
+}
+#end-landing h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+/*  -------------------------------------
+    |                                   |
+    |              Footer               |
+    |                                   |
+    -------------------------------------
+*/
+#footer {
+  padding-top: 35px;
+  position: relative;
+  background-color: #707070;
+  height: 200px;
+}
+#footer-container {
+  position: relative;
+  display: inline-block;
+}
+@media (min-width: 992px) {
+  #footer-container {
+    padding-top: 86px;
+  }
+}
+@media (max-width: 991px) {
+  #footer-container {
+    padding-top: 58px;
+  }
+}
+#footer .logo-icon {
+  top: 0px;
+}

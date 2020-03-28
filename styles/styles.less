@@ -100,8 +100,8 @@ h3 {
 h4 {
   .default-text;
   font-weight: lighter;
-  font-size: 26px;
-  color: @text-color;
+  font-size: 24px;
+  color: @blue-background;
 }
 
 p {
@@ -113,17 +113,18 @@ p {
 hr {
     width: 275px;
     border: none;
-    height: 1.5px;
+    height: 2px;
     color: @orange-color;
     background-color: @orange-color;
     box-shadow: 0 3px 7px fade(@orange-color, 35%);
     margin: 0 auto;
     @media (max-width: 575px) {
         width: 200px;
-    }  
+    }
+    border-radius: 2px;
 }
 
-#main-button {
+.main-button {
     .default-text;
     width: 500px;
     height: 100px;
@@ -134,21 +135,32 @@ hr {
     color: @background-color;
     font-weight: 600;
     box-shadow: 0px 2px 4px fade(black, 50%);
-    margin-top: 115px;
-
     @media (max-width: 991px) and (min-width: 576px) {
         width: 450px;
         height: 75px;
         font-size: 38px;
-        margin-top: 75px;
         border-radius: 20px;
     }
     @media (max-width: 575px) {
         width: 250px;
         height: 50px;
         font-size: 26px;
-        margin-top: 45px;
         border-radius: 10px;
+    }
+}
+
+.logo-icon {
+    position: absolute;
+    @media (min-width: 992px) {
+        width: 235px;
+        height: 86px;
+        background-image: url(../icons/logo-header.svg);
+    }
+    @media (max-width: 991px) {
+        width: 170px;
+        height: 58px;
+        top: 10px;
+        background-image: url(../icons/mob-logo-header.svg);
     }
 }
 
@@ -190,19 +202,12 @@ hr {
     background-color: @background-color;
 }
 
-.header-icon {
-    position: absolute;
+#header .logo-icon {
     @media (min-width: 992px) {
-        width: 235px;
-        height: 86px;
         top: 10px;
-        background-image: url(../icons/header/logo-header.svg);
     }
     @media (max-width: 991px) {
-        width: 170px;
-        height: 58px;
         top: 10px;
-        background-image: url(../icons/header/mob-logo-header.svg);
     }
 }
 
@@ -245,7 +250,7 @@ hr {
 
 }
 
-.header-soc {
+#header .social-links {
     top: 45px;
 }
 
@@ -362,6 +367,16 @@ hr {
     }
     @media (max-width: 575px) {
         top: 225px;
+    }
+}
+
+#main .main-button {
+    margin-top: 115px;
+    @media (max-width: 991px) and (min-width: 576px) {
+        margin-top: 75px;
+    }
+    @media (max-width: 575px) {
+        margin-top: 45px;
     }
 }
 
@@ -482,3 +497,95 @@ hr {
 /*#windows a:hover {
 
 }*/
+
+
+/*  -------------------------------------
+    |                                   |
+    |            End section            |
+    |                                   |
+    -------------------------------------
+*/
+#end {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    //height: 400px;
+    background-position: center;
+}
+
+#end p {
+    text-align: center;
+    color: @background-color;
+}
+
+#end hr {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    color: @background-color;
+    background-color: @background-color;
+    box-shadow: none;
+}
+
+
+/*  -------------------------------------
+    |                                   |
+    |      End of landing section       |
+    |                                   |
+    -------------------------------------
+*/
+
+#end-landing {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    background-color: @blue-background;
+
+    hr {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+/*  -------------------------------------
+    |                                   |
+    |              Footer               |
+    |                                   |
+    -------------------------------------
+*/
+#footer {
+    padding-top: 35px;
+    position: relative;
+    background-color: @second-text-color;
+    height: 200px;
+}
+
+#footer-container {
+    position: relative;
+    display: inline-block;
+    @media (min-width: 992px) {
+        padding-top: 86px;
+    }
+    @media (max-width: 991px) {
+        padding-top: 58px;
+    }
+}
+
+#footer .logo-icon {
+    top: 0px;
+}
+
+#footer .social-links {
+    
+}
