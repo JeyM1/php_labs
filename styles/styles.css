@@ -50,23 +50,54 @@ h1 {
   font-style: normal;
   font-weight: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 60px;
   color: #231F20;
+  margin-bottom: 10px;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 575px) {
+  h1 {
+    margin-bottom: 5px;
+    font-size: 32px;
+  }
 }
 h2 {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
+  font-size: 40px;
   color: #231F20;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 575px) {
+  h2 {
+    font-size: 22px;
+  }
 }
 h3 {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: normal;
-  font-weight: bold;
-  font-size: 26px;
+  font-size: 36px;
   color: #231F20;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 575px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 h4 {
   font-family: 'Segoe UI';
@@ -82,6 +113,20 @@ p {
   font-weight: normal;
   font-size: 20px;
   color: #231F20;
+}
+hr {
+  width: 275px;
+  border: none;
+  height: 1.5px;
+  color: #FF6B00;
+  background-color: #FF6B00;
+  box-shadow: 0 3px 7px rgba(255, 107, 0, 0.35);
+  margin: 0 auto;
+}
+@media (max-width: 575px) {
+  hr {
+    width: 200px;
+  }
 }
 /*  -------------------------------------
     |                                   |
@@ -260,11 +305,41 @@ a:visited:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 991px) and (min-width: 576px) {
+  #main {
+    height: 700px;
+  }
+}
+@media (max-width: 575px) {
+  #main {
+    height: 485px;
+  }
+}
 #main h1 {
   font-size: 60px;
   text-align: center;
   color: #DEDEDE;
   text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+}
+#main h1 br {
+  display: none;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  #main h1 {
+    font-size: 48px;
+  }
+  #main h1 br {
+    display: inline;
+  }
+}
+@media (max-width: 575px) {
+  #main h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  #main h1 br {
+    display: inline;
+  }
 }
 #main button {
   font-family: 'Segoe UI';
@@ -281,6 +356,86 @@ a:visited:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   margin-top: 115px;
 }
+@media (max-width: 991px) and (min-width: 576px) {
+  #main button {
+    width: 450px;
+    height: 75px;
+    font-size: 38px;
+    margin-top: 75px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 575px) {
+  #main button {
+    width: 250px;
+    height: 50px;
+    font-size: 26px;
+    margin-top: 45px;
+    border-radius: 10px;
+  }
+}
 #main > div {
   top: 418px;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  #main > div {
+    top: 345px;
+  }
+}
+@media (max-width: 575px) {
+  #main > div {
+    top: 225px;
+  }
+}
+/*  -------------------------------------
+    |                                   |
+    |          Why us section           |
+    |                                   |
+    -------------------------------------
+*/
+#why-us {
+  background-color: #DCE5E7;
+  height: fit-content;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+#why-us h1 {
+  text-align: center;
+}
+#why-us h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+#why-us > div {
+  margin-top: 50px;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  #why-us > div {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 575px) {
+  #why-us > div {
+    margin-top: 20px;
+  }
+}
+#why-us > div > div {
+  justify-content: unset;
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+#why-us > div > div img {
+  margin-right: 20px;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  #why-us > div > div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 575px) {
+  #why-us > div > div {
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+  }
 }

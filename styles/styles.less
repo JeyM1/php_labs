@@ -3,6 +3,8 @@
 @second-text-color: #707070;
 @white-text-color: #DEDEDE;
 @orange-color: #FF6B00;
+@blue-background: #DCE5E7;
+
 
 @xl-width: 1170px;
 @lg-width: 960px;
@@ -58,21 +60,41 @@ section {
 h1 {
     .default-text;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 60px;
     color: @text-color;
+    margin-bottom: 10px;
+
+    @media (max-width: 991px) and (min-width: 576px) {
+        font-size: 42px;
+    }
+    @media (max-width: 575px) {
+        margin-bottom: 5px;
+        font-size: 32px;
+    }
 }
 
 h2 {
-  .default-text;
-  font-size: 28px;
-  color: @text-color;
+    .default-text;
+    font-size: 40px;
+    color: @text-color;
+    @media (max-width: 991px) and (min-width: 576px) {
+        font-size: 30px;
+    }
+    @media (max-width: 575px) {
+        font-size: 22px;
+    }  
 }
 
 h3 {
-  .default-text;
-  font-weight: bold;
-  font-size: 26px;
-  color: @text-color;
+    .default-text;
+    font-size: 36px;
+    color: @text-color;
+    @media (max-width: 991px) and (min-width: 576px) {
+        font-size: 28px;
+    }
+    @media (max-width: 575px) {
+        font-size: 20px;
+    }
 }
 
 h4 {
@@ -86,6 +108,19 @@ p {
   .default-text;
   font-size: 20px;
   color: @text-color;
+}
+
+hr {
+    width: 275px;
+    border: none;
+    height: 1.5px;
+    color: @orange-color;
+    background-color: @orange-color;
+    box-shadow: 0 3px 7px fade(@orange-color, 35%);
+    margin: 0 auto;
+    @media (max-width: 575px) {
+        width: 200px;
+    }  
 }
 
 
@@ -260,6 +295,13 @@ p {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: 991px) and (min-width: 576px) {
+        height: 700px;
+    }
+    @media (max-width: 575px) {
+        height: 485px;
+    }
 }
 
 #main h1 {
@@ -267,6 +309,23 @@ p {
     text-align: center;
     color: @white-text-color;
     text-shadow: 1px 3px 4px fade(black, 30%);
+    br {
+        display: none;
+    }
+    @media (max-width: 991px) and (min-width: 576px) {
+        br {
+            display: inline;
+        }
+        font-size: 48px;
+    }
+    @media (max-width: 575px) {
+        br {
+            display: inline;
+        }
+        font-size: 36px;
+        line-height: 44px;
+    }
+
 }
 
 #main button {
@@ -281,8 +340,83 @@ p {
     font-weight: 600;
     box-shadow: 0px 2px 4px fade(black, 50%);
     margin-top: 115px;
+
+    @media (max-width: 991px) and (min-width: 576px) {
+        width: 450px;
+        height: 75px;
+        font-size: 38px;
+        margin-top: 75px;
+        border-radius: 20px;
+    }
+    @media (max-width: 575px) {
+        width: 250px;
+        height: 50px;
+        font-size: 26px;
+        margin-top: 45px;
+        border-radius: 10px;
+    }
 }
 
 #main>div {
     top: 418px;
+    @media (max-width: 991px) and (min-width: 576px) {
+        top: 345px;
+    }
+    @media (max-width: 575px) {
+        top: 225px;
+    }
+}
+
+
+/*  -------------------------------------
+    |                                   |
+    |          Why us section           |
+    |                                   |
+    -------------------------------------
+*/
+#why-us {
+    background-color: @blue-background;
+    height: fit-content;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    
+}
+
+#why-us h1 {
+    text-align: center;
+}
+
+
+#why-us h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#why-us>div {
+    margin-top: 50px;
+    @media (max-width: 991px) and (min-width: 576px) {
+        margin-top: 35px;
+    }
+    @media (max-width: 575px) {
+        margin-top: 20px;
+    }
+}
+
+#why-us>div>div {
+    justify-content: unset;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    img {
+        margin-right: 20px;
+    }
+    
+    @media (max-width: 991px) and (min-width: 576px) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 575px) {
+        margin-top: 12.5px;
+        margin-bottom: 12.5px;
+    }
 }
