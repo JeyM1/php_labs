@@ -128,6 +128,39 @@ hr {
     width: 200px;
   }
 }
+#main-button {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  width: 500px;
+  height: 100px;
+  background-color: #FF6B00;
+  border-radius: 35px;
+  border: none;
+  font-size: 42px;
+  color: #F5F5F5;
+  font-weight: 600;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 115px;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  #main-button {
+    width: 450px;
+    height: 75px;
+    font-size: 38px;
+    margin-top: 75px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 575px) {
+  #main-button {
+    width: 250px;
+    height: 50px;
+    font-size: 26px;
+    margin-top: 45px;
+    border-radius: 10px;
+  }
+}
 /*  -------------------------------------
     |                                   |
     |          Flex containers          |
@@ -341,39 +374,6 @@ a:visited:hover {
     display: inline;
   }
 }
-#main button {
-  font-family: 'Segoe UI';
-  font-style: normal;
-  font-weight: normal;
-  width: 500px;
-  height: 100px;
-  background-color: #FF6B00;
-  border-radius: 35px;
-  border: none;
-  font-size: 42px;
-  color: #F5F5F5;
-  font-weight: 600;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-top: 115px;
-}
-@media (max-width: 991px) and (min-width: 576px) {
-  #main button {
-    width: 450px;
-    height: 75px;
-    font-size: 38px;
-    margin-top: 75px;
-    border-radius: 20px;
-  }
-}
-@media (max-width: 575px) {
-  #main button {
-    width: 250px;
-    height: 50px;
-    font-size: 26px;
-    margin-top: 45px;
-    border-radius: 10px;
-  }
-}
 #main > div {
   top: 418px;
 }
@@ -438,4 +438,59 @@ a:visited:hover {
     margin-top: 12.5px;
     margin-bottom: 12.5px;
   }
+}
+/*  -------------------------------------
+    |                                   |
+    |       Our Services section        |
+    |                                   |
+    -------------------------------------
+*/
+#our-services {
+  padding-top: 55px;
+  padding-bottom: 45px;
+}
+#our-services h1 {
+  text-align: center;
+}
+#windows {
+  background-image: linear-gradient(rgba(112, 112, 112, 0.45), rgba(112, 112, 112, 0.45)), url(../images/windows.jpg);
+}
+#doors {
+  background-image: linear-gradient(rgba(255, 107, 0, 0.4), rgba(255, 107, 0, 0.4)), url(../images/doors.jpg);
+}
+#balconies {
+  background-image: linear-gradient(rgba(112, 112, 112, 0.4), rgba(112, 112, 112, 0.4)), url(../images/balconies.jpg);
+}
+#services a,
+a:visited {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  line-height: 500px;
+  width: 100%;
+  height: 100%;
+  color: #F5F5F5;
+  font-size: 80px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.68);
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  #services a,
+  a:visited {
+    font-size: 56px;
+    line-height: 350px;
+  }
+}
+@media (max-width: 575px) {
+  #services a,
+  a:visited {
+    font-size: 36px;
+    line-height: 200px;
+  }
+}
+#services > section {
+  background-size: cover;
+  padding: 0;
 }
