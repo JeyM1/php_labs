@@ -454,7 +454,7 @@ a:visited:hover {
   text-align: center;
 }
 #windows {
-  background-image: linear-gradient(rgba(112, 112, 112, 0.45), rgba(112, 112, 112, 0.45)), url(../images/windows.jpg);
+  background-image: linear-gradient(rgba(112, 112, 112, 0.35), rgba(112, 112, 112, 0.35)), url(../images/windows.jpg);
 }
 #doors {
   background-image: linear-gradient(rgba(255, 107, 0, 0.4), rgba(255, 107, 0, 0.4)), url(../images/doors.jpg);
