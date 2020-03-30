@@ -114,6 +114,9 @@ p {
   font-size: 20px;
   color: #231F20;
 }
+a {
+  text-decoration: none;
+}
 hr {
   width: 275px;
   border: none;
@@ -226,6 +229,10 @@ hr {
 @media (max-width: 991px) {
   #header {
     height: 75px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    border-bottom: 1.5px solid rgba(112, 112, 112, 0.8);
   }
 }
 @media (min-width: 992px) {
@@ -237,9 +244,6 @@ hr {
   #header .logo-icon {
     top: 10px;
   }
-}
-#header a {
-  text-decoration: none;
 }
 #phone {
   margin-right: 30px;
@@ -278,30 +282,6 @@ hr {
 }
 #header .social-links {
   top: 45px;
-}
-.mobile-selector {
-  position: absolute;
-  top: 15px;
-}
-@media (min-width: 992px) {
-  .mobile-selector {
-    display: none;
-  }
-}
-@media (max-width: 991px) and (min-width: 768px) {
-  .mobile-selector {
-    right: calc((100% - 760px)/2);
-  }
-}
-@media (max-width: 767px) and (min-width: 576px) {
-  .mobile-selector {
-    right: calc((100% - 540px)/2);
-  }
-}
-@media (max-width: 575px) {
-  .mobile-selector {
-    right: 20px;
-  }
 }
 .main-menu {
   position: absolute;
@@ -345,6 +325,75 @@ hr {
 .main-menu a:visited:hover {
   background-color: #ff7a1a;
   color: #F5F5F5;
+}
+.mobile-selector {
+  position: absolute;
+  z-index: 100;
+  top: 15px;
+}
+@media (min-width: 992px) {
+  .mobile-selector {
+    display: none;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .mobile-selector {
+    right: calc((100% - 760px)/2);
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .mobile-selector {
+    right: calc((100% - 540px)/2);
+  }
+}
+@media (max-width: 575px) {
+  .mobile-selector {
+    right: 20px;
+  }
+}
+#mob-menu {
+  left: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  position: fixed;
+  z-index: 2;
+  width: 320px;
+  height: calc(100% - 75px);
+  background-image: linear-gradient(to left top, #d6d6d6, #DCE5E7, #d6d6d6);
+  transition: 0.4s ease;
+}
+#mob-menu.open {
+  left: calc(100% - 320px);
+}
+#mob-menu a,
+#mob-menu a:visited {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  color: #231F20;
+  font-size: 28px;
+  font-weight: 600;
+  width: 200px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+#mob-menu nav {
+  display: flex;
+  flex-direction: column;
+}
+#mob-menu #mob-social-links {
+  margin-top: 25px;
+}
+.back-layer {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 /*  -------------------------------------
     |                                   |
@@ -633,7 +682,8 @@ hr {
     display: flex;
   }
 }
-#mob-social-links a {
+#mob-social-links a,
+#mob-social-links a:visited {
   text-decoration: none;
   margin-left: 25px;
   margin-right: 25px;
