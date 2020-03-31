@@ -4,6 +4,7 @@
 @white-text-color: #DEDEDE;
 @orange-color: #FF6B00;
 @blue-background: #DCE5E7;
+@darker-blue: #D4DADE;
 
 
 @xl-width: 1170px;
@@ -677,5 +678,63 @@ hr {
         text-decoration: none;
         margin-left: 25px;
         margin-right: 25px;
+    }
+}
+
+/*  -------------------------------------
+    |                                   |
+    |          About section            |
+    |                                   |
+    -------------------------------------
+*/
+#about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: @blue-background;
+    h1 {
+        text-align: center;
+    }
+    p {
+        width: 630px;
+        padding-left: 60px;
+        font-size: 34px;
+        height: 640px;
+        @media (max-width: 1199px) {
+            padding: 0;
+            width: 100%;
+            height: fit-content;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 575px) {
+            font-size: 24px;
+        }
+    }
+    >div {
+        margin-top: 45px;
+        @media (max-width: 575px) {
+            margin-top: 25px;
+        }
+    }
+}
+
+#about div {
+    flex-wrap: wrap-reverse;
+}
+
+.img-about {
+    background-image: url(../images/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 540px;
+    height: 640px;
+    border-radius: 15px;
+    @media (max-width: 1199px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (max-width: 575px) {
+        width: 100%;
+        height: 400px;
     }
 }
