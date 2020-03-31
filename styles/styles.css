@@ -833,7 +833,8 @@ hr {
 }
 #map iframe {
   width: 100%;
-  height: calc(90vh/2);
+  height: 80vh;
+  border: 1px solid #707070;
 }
 #map h1 {
   text-align: center;
