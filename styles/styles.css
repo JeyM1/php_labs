@@ -753,3 +753,96 @@ hr {
     height: 400px;
   }
 }
+/*  -------------------------------------
+    |                                   |
+    |        Contacts section           |
+    |                                   |
+    -------------------------------------
+*/
+#contacts {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+#contacts h1 {
+  text-align: center;
+}
+#contacts hr {
+  margin-bottom: 55px;
+}
+@media (max-width: 575px) {
+  #contacts hr {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 575px) {
+  #contacts {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+#contacts p {
+  font-size: 34px;
+  width: 100%;
+}
+@media (max-width: 575px) {
+  #contacts p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 350px) {
+  #contacts p {
+    font-size: 20px;
+  }
+}
+#contacts p b {
+  font-weight: 600;
+}
+#contacts img {
+  display: inline-block;
+  margin-right: 35px;
+}
+@media (max-width: 575px) {
+  #contacts img {
+    margin-right: 15px;
+  }
+}
+#contacts > div > div {
+  justify-content: flex-start;
+  margin-bottom: 35px;
+}
+@media (max-width: 575px) {
+  #contacts > div > div {
+    margin-bottom: 15px;
+  }
+}
+/*  -------------------------------------
+    |                                   |
+    |           Map section             |
+    |                                   |
+    -------------------------------------
+*/
+#map {
+  background-color: #DCE5E7;
+  padding-top: 55px;
+  padding-bottom: 25px;
+}
+@media (max-width: 575px) {
+  #map {
+    padding-top: 25px;
+  }
+}
+#map iframe {
+  width: 100%;
+  height: calc(90vmax/2);
+}
+#map h1 {
+  text-align: center;
+}
+#map hr {
+  margin-bottom: 45px;
+}
+@media (max-width: 575px) {
+  #map hr {
+    margin-bottom: 25px;
+  }
+}
