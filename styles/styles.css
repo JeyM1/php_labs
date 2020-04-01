@@ -400,7 +400,7 @@ hr {
   border-left: 4px groove #9aa8b2;
 }
 #mob-menu nav {
-  height: calc(100vh - 250px);
+  height: calc(100vh - 235px);
   justify-content: space-between;
 }
 #mob-menu.open {
