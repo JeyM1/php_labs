@@ -23,6 +23,14 @@ html, body {
     padding: 0;
 }
 
+
+
+/*
+  ----------------------------------------------------------------------
+    Basic Settings
+  ----------------------------------------------------------------------
+*/
+
 section {
     position: relative;
 
@@ -354,7 +362,7 @@ hr {
 }
 
 #mob-menu nav {
-    height: calc(~'100vh - 180px');
+    height: calc(~'100vh - 210px');
     justify-content: space-between;
 }
 
@@ -395,6 +403,92 @@ hr {
     background: rgba(0,0,0,.6);
     z-index: 1;
 }
+
+/*  -------------------------------------
+    |                                   |
+    |            End section            |
+    |                                   |
+    -------------------------------------
+*/
+#end {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    //height: 400px;
+    background-position: center;
+}
+
+#end p {
+    text-align: center;
+    color: @background-color;
+}
+
+#end hr {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    color: @background-color;
+    background-color: @background-color;
+    box-shadow: none;
+}
+
+/*  -------------------------------------
+    |                                   |
+    |              Footer               |
+    |                                   |
+    -------------------------------------
+*/
+#footer {
+    padding-top: 35px;
+    position: relative;
+    background-color: @second-text-color;
+    height: 200px;
+}
+
+#footer-container {
+    position: relative;
+    display: inline-block;
+    @media (min-width: 992px) {
+        padding-top: 86px;
+    }
+    @media (max-width: 991px) {
+        padding-top: 58px;
+    }
+}
+
+#footer .logo-icon {
+    top: 0px;
+}
+
+#footer .social-links {
+    bottom: 45px;
+}
+
+#mob-social-links {
+    @media (min-width: 992px) {
+        display: none;
+    }
+    @media (max-width: 991px) {
+        display: flex;
+    }
+    position: relative;
+    top: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+    a, a:visited {
+        text-decoration: none;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+
+/*
+  ----------------------------------------------------------------------
+    Index Page
+  ----------------------------------------------------------------------
+*/
+
 /*  -------------------------------------
     |                                   |
     |           Main section            |
@@ -591,35 +685,6 @@ hr {
 
 /*  -------------------------------------
     |                                   |
-    |            End section            |
-    |                                   |
-    -------------------------------------
-*/
-#end {
-    padding-top: 80px;
-    padding-bottom: 60px;
-    background-image: url(../images/back.jpg);
-    background-size: cover;
-    //height: 400px;
-    background-position: center;
-}
-
-#end p {
-    text-align: center;
-    color: @background-color;
-}
-
-#end hr {
-    margin-top: 10px;
-    margin-bottom: 60px;
-    color: @background-color;
-    background-color: @background-color;
-    box-shadow: none;
-}
-
-
-/*  -------------------------------------
-    |                                   |
     |      End of landing section       |
     |                                   |
     -------------------------------------
@@ -646,57 +711,11 @@ hr {
 }
 
 
-
-
-/*  -------------------------------------
-    |                                   |
-    |              Footer               |
-    |                                   |
-    -------------------------------------
+/*
+  ----------------------------------------------------------------------
+    About Page
+  ----------------------------------------------------------------------
 */
-#footer {
-    padding-top: 35px;
-    position: relative;
-    background-color: @second-text-color;
-    height: 200px;
-}
-
-#footer-container {
-    position: relative;
-    display: inline-block;
-    @media (min-width: 992px) {
-        padding-top: 86px;
-    }
-    @media (max-width: 991px) {
-        padding-top: 58px;
-    }
-}
-
-#footer .logo-icon {
-    top: 0px;
-}
-
-#footer .social-links {
-    bottom: 45px;
-}
-
-#mob-social-links {
-    @media (min-width: 992px) {
-        display: none;
-    }
-    @media (max-width: 991px) {
-        display: flex;
-    }
-    position: relative;
-    top: 0px;
-    width: 100%;
-    margin-bottom: 20px;
-    a, a:visited {
-        text-decoration: none;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-}
 
 /*  -------------------------------------
     |                                   |
@@ -843,4 +862,110 @@ hr {
     @media (max-width: 575px) {
         margin-bottom: 25px;
     }
+}
+
+/*
+  ----------------------------------------------------------------------
+    Windows Page
+  ----------------------------------------------------------------------
+*/
+
+/*  -------------------------------------
+    |                                   |
+    |          Types section            |
+    |                                   |
+    -------------------------------------
+*/
+#types {
+    background-color: @darker-blue;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    @media (max-width: 575px) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    >div {
+        justify-content: space-between;
+        @media (max-width: 991px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    hr {
+        margin-bottom: 45px;
+        @media (max-width: 575px) {
+            margin-bottom: 5px;
+        }
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+.window-type, .window-type:visited {
+    display: inline-block;
+    position: relative;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px fade(black, 50%);
+    @media (max-width: 1199px) and (min-width: 992px), (max-width: 575px){
+        width: 300px;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 25px;
+    }
+    div {
+        border-radius: 10px 10px 0 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 350px;
+        height: 400px;
+        @media (max-width: 1199px) and (min-width: 992px), (max-width: 575px){
+            width: 300px;
+            height: 350px;
+        }
+    }
+    p {
+        font-size: 26px;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #A6B7BB;
+        @media (max-width: 1199px) and (min-width: 992px), (max-width: 575px){   
+            font-size: 22px;
+        }
+    }
+}
+
+#metalplastic {
+    background-image: url(../images/metalplastic-window.jpg);
+}
+
+#aluminium {
+    background-image: url(../images/aluminium-window.jpg);
+}
+
+#wooden {
+    background-image: url(../images/wooden-window.jpg);
+}
+
+/*  -------------------------------------
+    |                                   |
+    |         Prices section            |
+    |                                   |
+    -------------------------------------
+*/
+#prices {
+    background-color: @blue-background;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    @media (max-width: 575px) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
 }

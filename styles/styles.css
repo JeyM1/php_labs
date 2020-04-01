@@ -7,6 +7,11 @@ body {
   margin: 0;
   padding: 0;
 }
+/*
+  ----------------------------------------------------------------------
+    Basic Settings
+  ----------------------------------------------------------------------
+*/
 section {
   position: relative;
 }
@@ -372,7 +377,7 @@ hr {
   border-left: 4px groove #9aa8b2;
 }
 #mob-menu nav {
-  height: calc(100vh - 180px);
+  height: calc(100vh - 210px);
   justify-content: space-between;
 }
 #mob-menu.open {
@@ -411,6 +416,89 @@ hr {
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
+/*  -------------------------------------
+    |                                   |
+    |            End section            |
+    |                                   |
+    -------------------------------------
+*/
+#end {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-image: url(../images/back.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#end p {
+  text-align: center;
+  color: #F5F5F5;
+}
+#end hr {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  color: #F5F5F5;
+  background-color: #F5F5F5;
+  box-shadow: none;
+}
+/*  -------------------------------------
+    |                                   |
+    |              Footer               |
+    |                                   |
+    -------------------------------------
+*/
+#footer {
+  padding-top: 35px;
+  position: relative;
+  background-color: #707070;
+  height: 200px;
+}
+#footer-container {
+  position: relative;
+  display: inline-block;
+}
+@media (min-width: 992px) {
+  #footer-container {
+    padding-top: 86px;
+  }
+}
+@media (max-width: 991px) {
+  #footer-container {
+    padding-top: 58px;
+  }
+}
+#footer .logo-icon {
+  top: 0px;
+}
+#footer .social-links {
+  bottom: 45px;
+}
+#mob-social-links {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  #mob-social-links {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  #mob-social-links {
+    display: flex;
+  }
+}
+#mob-social-links a,
+#mob-social-links a:visited {
+  text-decoration: none;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+/*
+  ----------------------------------------------------------------------
+    Index Page
+  ----------------------------------------------------------------------
+*/
 /*  -------------------------------------
     |                                   |
     |           Main section            |
@@ -606,30 +694,6 @@ hr {
 }
 /*  -------------------------------------
     |                                   |
-    |            End section            |
-    |                                   |
-    -------------------------------------
-*/
-#end {
-  padding-top: 80px;
-  padding-bottom: 60px;
-  background-image: url(../images/back.jpg);
-  background-size: cover;
-  background-position: center;
-}
-#end p {
-  text-align: center;
-  color: #F5F5F5;
-}
-#end hr {
-  margin-top: 10px;
-  margin-bottom: 60px;
-  color: #F5F5F5;
-  background-color: #F5F5F5;
-  box-shadow: none;
-}
-/*  -------------------------------------
-    |                                   |
     |      End of landing section       |
     |                                   |
     -------------------------------------
@@ -650,60 +714,11 @@ hr {
   text-align: center;
   margin-bottom: 40px;
 }
-/*  -------------------------------------
-    |                                   |
-    |              Footer               |
-    |                                   |
-    -------------------------------------
+/*
+  ----------------------------------------------------------------------
+    About Page
+  ----------------------------------------------------------------------
 */
-#footer {
-  padding-top: 35px;
-  position: relative;
-  background-color: #707070;
-  height: 200px;
-}
-#footer-container {
-  position: relative;
-  display: inline-block;
-}
-@media (min-width: 992px) {
-  #footer-container {
-    padding-top: 86px;
-  }
-}
-@media (max-width: 991px) {
-  #footer-container {
-    padding-top: 58px;
-  }
-}
-#footer .logo-icon {
-  top: 0px;
-}
-#footer .social-links {
-  bottom: 45px;
-}
-#mob-social-links {
-  position: relative;
-  top: 0px;
-  width: 100%;
-  margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  #mob-social-links {
-    display: none;
-  }
-}
-@media (max-width: 991px) {
-  #mob-social-links {
-    display: flex;
-  }
-}
-#mob-social-links a,
-#mob-social-links a:visited {
-  text-decoration: none;
-  margin-left: 25px;
-  margin-right: 25px;
-}
 /*  -------------------------------------
     |                                   |
     |          About section            |
@@ -861,5 +876,126 @@ hr {
 @media (max-width: 575px) {
   #map hr {
     margin-bottom: 25px;
+  }
+}
+/*
+  ----------------------------------------------------------------------
+    Windows Page
+  ----------------------------------------------------------------------
+*/
+/*  -------------------------------------
+    |                                   |
+    |          Types section            |
+    |                                   |
+    -------------------------------------
+*/
+#types {
+  background-color: #D4DADE;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+@media (max-width: 575px) {
+  #types {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+#types > div {
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  #types > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#types hr {
+  margin-bottom: 45px;
+}
+@media (max-width: 575px) {
+  #types hr {
+    margin-bottom: 5px;
+  }
+}
+#types h1 {
+  text-align: center;
+}
+.window-type,
+.window-type:visited {
+  display: inline-block;
+  position: relative;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 1199px) and (min-width: 992px), (max-width: 575px) {
+  .window-type,
+  .window-type:visited {
+    width: 300px;
+  }
+}
+@media (max-width: 991px) {
+  .window-type,
+  .window-type:visited {
+    margin-bottom: 25px;
+  }
+}
+.window-type div,
+.window-type:visited div {
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 400px;
+}
+@media (max-width: 1199px) and (min-width: 992px), (max-width: 575px) {
+  .window-type div,
+  .window-type:visited div {
+    width: 300px;
+    height: 350px;
+  }
+}
+.window-type p,
+.window-type:visited p {
+  font-size: 26px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #A6B7BB;
+}
+@media (max-width: 1199px) and (min-width: 992px), (max-width: 575px) {
+  .window-type p,
+  .window-type:visited p {
+    font-size: 22px;
+  }
+}
+#metalplastic {
+  background-image: url(../images/metalplastic-window.jpg);
+}
+#aluminium {
+  background-image: url(../images/aluminium-window.jpg);
+}
+#wooden {
+  background-image: url(../images/wooden-window.jpg);
+}
+/*  -------------------------------------
+    |                                   |
+    |         Prices section            |
+    |                                   |
+    -------------------------------------
+*/
+#prices {
+  background-color: #DCE5E7;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+@media (max-width: 575px) {
+  #prices {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
