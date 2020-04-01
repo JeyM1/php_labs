@@ -326,6 +326,12 @@ hr {
   background-color: #ff7a1a;
   color: #F5F5F5;
 }
+/*  -------------------------------------
+    |                                   |
+    |         Mobile selector           |
+    |                                   |
+    -------------------------------------
+*/
 .mobile-selector {
   position: absolute;
   z-index: 100;
@@ -362,6 +368,11 @@ hr {
   height: calc(100% - 75px);
   background-image: linear-gradient(to left top, #d6d6d6, #DCE5E7, #d6d6d6);
   transition: 0.4s ease;
+  border-left: 4px groove #9aa8b2;
+}
+#mob-menu nav {
+  height: calc(100vh - 180px);
+  justify-content: space-between;
 }
 #mob-menu.open {
   left: calc(100% - 320px);
@@ -375,8 +386,12 @@ hr {
   font-size: 28px;
   font-weight: 600;
   width: 200px;
+  height: 100%;
   margin-top: 3px;
   margin-bottom: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #mob-menu nav {
   display: flex;

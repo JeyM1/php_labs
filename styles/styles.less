@@ -311,6 +311,13 @@ hr {
     color: @background-color;
 }
 
+
+/*  -------------------------------------
+    |                                   |
+    |         Mobile selector           |
+    |                                   |
+    -------------------------------------
+*/
 .mobile-selector {
     position: absolute;
     z-index: 100;
@@ -342,6 +349,12 @@ hr {
     height: calc(~'100% - 75px');
     background-image: linear-gradient(to left top, lighten(@second-text-color, 40%), @blue-background, lighten(@second-text-color, 40%));
     transition: .4s ease;
+    border-left: 4px groove darken(@darker-blue, 20%);
+}
+
+#mob-menu nav {
+    height: calc(~'100vh - 180px');
+    justify-content: space-between;
 }
 
 #mob-menu.open {
@@ -354,8 +367,12 @@ hr {
     font-size: 28px;
     font-weight: 600;
     width: 200px;
+    height: 100%;
     margin-top: 3px;
     margin-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #mob-menu nav {
@@ -366,7 +383,6 @@ hr {
 #mob-menu #mob-social-links {
     margin-top: 25px;
 }
-
 
 .back-layer {
     position: fixed;
