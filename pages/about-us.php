@@ -35,3 +35,28 @@
     <hr>
     <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%98%D0%B2%D0%B0%D0%BD%D0%B0%20%D0%93%D0%BE%D0%BD%D1%82%D1%8B%203%D0%B0%2C%20Kyiv%2C%20Ukraine&key=AIzaSyByaO1Vk1Xv5lta3HjGVMDDZ6Iz0Tvrw4Q" allowfullscreen></iframe>
 </section>
+<section id="comments">
+        <h1>Отзывы о нас</h1>
+        <hr>
+        <div class="flex-container centered columned">
+            <div class="comment">
+                <div>
+                    <p class="comment-name">Величайший</p>
+                    <p class="comment-date">10 марта 2020</p>
+                </div>
+                <p>Крутой сервис!</p>
+            </div>
+        </div>
+        
+        <form name="add_comment" method="post" action="post.php" 
+                    class="flex-container centered columned">
+                <h3>Оставить комментарий</h3>
+                <p>Введите Ваше имя:</p>
+                <textarea name="comment-name" rows="1"></textarea>
+                <br>
+                <p>Введите комментарий:</p>
+                <textarea name="comment" rows="4"></textarea>
+                <br>
+                <input name="" type="submit" value="Отправить" class="button-orange"/>
+            </form>
+    </section>
