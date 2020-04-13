@@ -39,24 +39,39 @@
         <h1>Отзывы о нас</h1>
         <hr>
         <div class="flex-container centered columned">
-            <div class="comment">
-                <div>
-                    <p class="comment-name">Величайший</p>
-                    <p class="comment-date">10 марта 2020</p>
-                </div>
-                <p>Крутой сервис!</p>
-            </div>
+        <?php
+            $comments = $Database->conn->query("SELECT * FROM comments ORDER BY date DESC;");
+            if($comments->num_rows > 0){
+                for($i = 0; $i < $cfg['about_max_comments']; $i++) {
+                    if(!($comment = $comments->fetch_assoc())){
+                        break;
+                    }
+                    $name = $comment['name'];
+                    $date = date('d.m.Y H:i', strtotime($comment['date']));
+                    $comment_body = $comment['comment'];
+                    $comment_code = "
+                    <div class=\"comment\">
+                        <div>
+                            <p class=\"comment-name\">".$name."</p>
+                            <p class=\"comment-date\">".$date."</p>
+                        </div>
+                        <p>".$comment_body."</p>
+                    </div>";
+                    echo $comment_code;
+                }
+            } else echo "<p>Пока нет отзывов, будьте первым!</p>";
+        ?>
+            
         </div>
-        
-        <form name="add_comment" method="post" action="post.php" 
+        <form name="add_comment" method="post" action="scripts/add_comment.php"
                     class="flex-container centered columned">
                 <h3>Оставить комментарий</h3>
                 <p>Введите Ваше имя:</p>
-                <textarea name="comment-name" rows="1"></textarea>
+                <input type="text" name="comment_name" value="" required></input>
                 <br>
                 <p>Введите комментарий:</p>
-                <textarea name="comment" rows="4"></textarea>
+                <textarea name="comment" rows="4" required></textarea>
                 <br>
                 <input name="" type="submit" value="Отправить" class="button-orange"/>
-            </form>
-    </section>
+        </form>
+</section>

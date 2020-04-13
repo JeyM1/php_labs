@@ -34,13 +34,13 @@
 </section>
 <div id="mob-menu">
     <nav class="flex-container columned">
-        <a href="./index.html">Главная</a>
-        <a href="./windows.html">Окна</a>
-        <a href="#">Двери</a>
-        <a href="#">Балконы</a>
-        <a href="#">Лоджии</a>
-        <a href="#">Другое</a>
-        <a href="./about-us.html">О нас</a>
+        <a href="./">Главная</a>
+        <a href="./?page=windows">Окна</a>
+        <a href="./?page=doors">Двери</a>
+        <a href="./?page=balconies">Балконы</a>
+        <a href="./?page=loggias">Лоджии</a>
+        <a href="./?page=others">Другое</a>
+        <a href="./?page=about-us">О нас</a>
     </nav>
     <div id="mob-social-links" class="flex-container centered">
         <a href="#">

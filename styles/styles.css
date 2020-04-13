@@ -958,10 +958,13 @@ hr {
 #comments form > h3 {
   margin-bottom: 15px;
 }
-#comments textarea {
+#comments textarea,
+#comments input {
   font-size: 25px;
   resize: none;
   border-radius: 5px;
+  border: 1px solid #707070;
+  padding: 5px 10px;
   width: 100%;
 }
 .comment {

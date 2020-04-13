@@ -1,20 +1,15 @@
-<?php 
-    class POST{
-        private $inst;
-        private function __construct() {}
-        public static function ini() {
-            if(!isset($inst)) $inst = new POST();
-            return $inst;
-        }
-    };
+<?php
+require_once("./scripts/config.php");
+require_once("./scripts/Database.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>OKnov</title>
-    <meta name="description" content="Best windows and constructing solutions for everyone!">
+    <title><?= $cfg['site_name']?></title>
+    <?= "<meta name=\"description\" content=".$cfg['site_title'].">"?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/selector.css">
@@ -27,9 +22,7 @@
 <body>
     <?php
         require_once('./parts/header.php');
-
         $page = strip_tags("./pages/".($_GET['page'] ?? "landing")).".php";
-
         require(file_exists($page) ? $page : "./pages/404.php");
         require_once('./parts/footer.php');
     ?>
