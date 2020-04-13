@@ -14,6 +14,12 @@ class Database {
         $this->conn->query("SET NAMES utf8");
     }
 
+    public function __destruct() {
+        $this->conn->close();
+    }
+
+    
+
 }
 
 $Database = new Database($cfg);

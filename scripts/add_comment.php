@@ -10,10 +10,10 @@ if(!$comment || !$name){
     die("Comment or Name cannot include tags!");
 }
 
-$stmt = "INSERT INTO comments VALUES("."'".$name."'".", NOW(), "."'".$comment."'".");";
+$stmt = "INSERT INTO comments VALUES('$name', NOW(), '$comment');";
 
 if ($Database->conn->query($stmt) !== TRUE) {
-    die("SQL Error: " . $stmt . "<br>" . $Database->conn->error);
+    die("SQL Error: $stmt <br>".$Database->conn->error);
 }
 
 header("Location: ../?page=about-us#comments");
