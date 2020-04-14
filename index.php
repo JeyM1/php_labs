@@ -22,7 +22,7 @@ require_once("./scripts/Database.php");
 <body>
     <?php
         require_once('./parts/header.php');
-        $page = strip_tags("./pages/".($_GET['page'] ?? "landing")).".php";
+        $page = "./pages/".($_GET['page'] ?? "landing").".php";
         require(file_exists($page) ? $page : "./pages/404.php");
         require_once('./parts/footer.php');
     ?>

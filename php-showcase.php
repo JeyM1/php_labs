@@ -46,9 +46,12 @@ class JackDog extends Dog {
     }
 }
 
+$DOGTYPES = ["TemmyDog", "Dog", "JackDog"];
+
 $dogs = array();
 for($i = 0; $i < 5; $i++){
-    $dogs[] = ($var = rand()%3) == 0 ? new Dog : ($var == 1 ? new TemmyDog : new JackDog);
+    $dogname = $DOGTYPES[rand(0, count($DOGTYPES) - 1)];
+    $dogs[] = new $dogname();
 }
 
 foreach($dogs as $dog) {
