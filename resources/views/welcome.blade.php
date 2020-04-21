@@ -21,7 +21,7 @@
                     @csrf
                     <div class="auth-fields">
                         <input type="text" name="username" required>
-                        <input type="password" name="pass" required>
+                        <input type="password" name="password" required>
                     </div>
                     <div class="submit-btns">
                         <input type="submit" name="submit" value="Login">
