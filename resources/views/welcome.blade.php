@@ -12,24 +12,23 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                <form method="post">
+                    @csrf
+                    <h2>Login to existing account</h2>
+                    <div class="auth-fields">
+                        <input type="text" name="username" required>
+                        <input type="password" name="pass" required>
+                    </div>
+                    <div>
+                        <input type="submit" name="submit" value="Login">
+                        <input type="submit" name="submit" value="Register">
+                    </div>
+                    
+                </form>
             </div>
         </div>
     </body>

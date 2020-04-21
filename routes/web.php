@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'MainController@welcome');
+Route::post('/', 'MainController@userlogin');
 Route::get('users/{id}', 'MainController@displayUser');

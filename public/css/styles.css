@@ -41,3 +41,10 @@ body {
 .m-b-md {
   margin-bottom: 30px;
 }
+.auth-fields {
+  display: flex;
+  flex-direction: column;
+}
+.auth-fields input {
+  margin-bottom: 10px;
+}
