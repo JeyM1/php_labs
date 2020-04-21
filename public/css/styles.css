@@ -42,20 +42,32 @@ body {
   margin-bottom: 30px;
 }
 .form-login {
+  position: relative;
   max-width: 350px;
   width: 100%;
   display: block;
   margin: 0 auto;
 }
+.form-login div > p {
+  width: 73px;
+}
 .auth-fields {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-bottom: 10px;
 }
 .auth-fields input {
-  margin-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-left: 10px;
+  width: 100%;
+}
+.auth-fields > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 .submit-btns {
   display: flex;
@@ -70,4 +82,13 @@ body {
   font-size: 16px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.error_message {
+  position: relative;
+  background-color: #cc0030;
+  border: 2px solid #4e0012;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: #DEDEDE;
+  margin-top: 20px;
 }
