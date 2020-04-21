@@ -14,16 +14,16 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Hello Laravel
                 </div>
-                <form method="post">
+                <h2>Login to existing account</h2>
+                <form method="post" class="form-login">
                     @csrf
-                    <h2>Login to existing account</h2>
                     <div class="auth-fields">
                         <input type="text" name="username" required>
                         <input type="password" name="pass" required>
                     </div>
-                    <div>
+                    <div class="submit-btns">
                         <input type="submit" name="submit" value="Login">
                         <input type="submit" name="submit" value="Register">
                     </div>
