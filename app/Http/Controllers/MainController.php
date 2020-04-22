@@ -38,16 +38,14 @@ class MainController extends Controller {
 
         // getting inputs info
         $username = $input['username'];
-        // hashing password
         $password = $input['password'];
 
-        // response from server
-        $view_list = ['username' => $username];
+        // save parameters, to return them if user logged in
+        $params = [];
 
         // response from DB
         $curr_user = DB::table('users')->where('username', $username)->first();
-        $curr_user = $curr_user ? get_object_vars($curr_user) : [];
-        $entries = null;
+
         if($type == "Login") {
             // TODO: check if login and pass is true, save total entries, increment for 1
             if(!$curr_user) {
@@ -56,40 +54,55 @@ class MainController extends Controller {
                     'login_failed' => MainController::$login_failures['username_incorrect']
                     ]);
             }
-            if(!Hash::check($password, $curr_user['password'])) {
+            if(!Hash::check($password, $curr_user->password)) {
                 return view('welcome', [
                     'login_failed' => MainController::$login_failures['password_dont_match']
                     ]);
             }
 
-
+            // login success
+            $params['logged_in'] = true;
+            $params['entries'] = $curr_user->entries + 1;
+            DB::table('users')->where('id', $curr_user->id)->update(['entries' => $curr_user->entries + 1]);
         }
-        if($type == "Register") {
+        else if($type == "Register") {
             if(!$curr_user) {
                 // inserting data if it not exists
                 DB::table('users')->insert([
                     'username' => $username,
                     'password' => Hash::make($password)
-               ]);
-               $view_list['just_registered'] = true;
+                ]);
+
+               $params['just_registered'] = true;
             } else {
                 return view('welcome', [
-                    'registration_failed' => MainController::$registration_failures['already_exists']]);
+                    'registration_failed' => MainController::$registration_failures['already_exists']
+                    ]);
             }
-        }            
-        // login success
-        $view_list['logged_in'] = true;
-        return view("users", $view_list);
+        }
+
+        return redirect()->route('users', ['username' => $username])->with('params', $params);
     }
 
     public function displayUser($username) {
-        $entries = 0;
+
         // TODO: check if the user exists, else give 404
-        return view("users", [
-            'username' => $username,
-            'entries' => $entries,
-            'logged_in' => false
-        ]);
+
+        // check, user logged in?, just registered?
+        $params = session()->get('params');
+
+        // if user not logged in, check that username
+        if(!isset($params['logged_in'])) {
+            $params['logged_in'] = false;
+            $curr_user = DB::table('users')->where('username', $username)->first();
+            if(!$curr_user) {
+                abort(404, 'User not found.');
+            }
+            $params['entries'] = $curr_user->entries;
+        }
+        // user exists
+        $params['username'] = $username;
+        return view('users', $params);
     }
 }   
 ?>

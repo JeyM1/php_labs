@@ -14,7 +14,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Hello Laravel
+                    Entries Collector
                 </div>
                 <h2>Login to existing account</h2>
                 <form method="post" class="form-login">
