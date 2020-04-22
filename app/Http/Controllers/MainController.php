@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class MainController extends Controller {
     // error handling
     static $login_failures = [
-        'username_incorrect' => "You have entered incorrect username.",
+        'username_not_exist' => "Username you have provided is not registered.",
         'password_dont_match' => "Password that you provided dont match for that user."
     ];
     
@@ -53,7 +53,7 @@ class MainController extends Controller {
             if(!$curr_user) {
                 // error - no such user in DB
                 return view('welcome', [
-                    'login_failed' => MainController::$login_failures['username_incorrect']
+                    'login_failed' => MainController::$login_failures['username_not_exist']
                     ]);
             }
             if(!Hash::check($password, $curr_user->password)) {
@@ -63,7 +63,6 @@ class MainController extends Controller {
             }
 
             // login success
-            $params['logged_in'] = true;
             $params['entries'] = $curr_user->entries + 1;
             DB::table('users')->where('id', $curr_user->id)->update(['entries' => $curr_user->entries + 1]);
         }
@@ -82,7 +81,7 @@ class MainController extends Controller {
                     ]);
             }
         }
-
+        $params['logged_in'] = true;
         return redirect()->route('users', ['username' => $username])->with('params', $params);
     }
 
