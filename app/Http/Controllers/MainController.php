@@ -20,6 +20,8 @@ class MainController extends Controller {
         'already_exists' => "This username is already registered."
     ];
     
+    const MAX_STATS_USER_COUNT = 30;
+
     // basic welcome page
     public function welcome() {
         return view('welcome');

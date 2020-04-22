@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   background-color: #fff;
@@ -47,6 +50,7 @@ body {
   width: 100%;
   display: block;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 .form-login div > p {
   width: 73px;
@@ -91,4 +95,23 @@ body {
   padding: 5px 20px;
   color: #DEDEDE;
   margin-top: 20px;
+}
+.scoreboard {
+  position: relative;
+  background-color: #dadee7;
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 20px;
+  border: 2px outset #9ea4b4;
+}
+.scoreboard li {
+  position: relative;
+  font-size: 20px;
+  text-align: left;
+}
+.scoreboard li span {
+  position: relative;
+  left: 10px;
 }
