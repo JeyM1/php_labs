@@ -10,6 +10,16 @@ body {
   height: 100vh;
   margin: 0;
 }
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s color;
+}
+a:hover,
+a:visited:hover {
+  color: #363d57;
+}
 .full-height {
   height: 100vh;
 }
@@ -114,4 +124,10 @@ body {
 .scoreboard li span {
   position: relative;
   left: 10px;
+}
+.back-to-main {
+  display: block;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 40px;
 }
