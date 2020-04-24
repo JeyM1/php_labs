@@ -86,9 +86,6 @@ class MainController extends Controller {
     }
 
     public function displayUser($username) {
-
-        // TODO: check if the user exists, else give 404
-
         // check, user logged in?, just registered?
         $params = session()->get('params');
 
