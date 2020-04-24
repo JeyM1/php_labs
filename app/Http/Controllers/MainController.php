@@ -80,7 +80,7 @@ class MainController extends Controller {
                     'registration_failed' => MainController::$registration_failures['already_exists']
                     ]);
             }
-        }
+        } else abort(403, 'Unauthorized action.');
         $params['logged_in'] = true;
         return redirect()->route('users', ['username' => $username])->with('params', $params);
     }
