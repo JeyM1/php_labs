@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{login_failed?, registration_failed?}', 'MainController@welcome');
+Route::get('/', 'MainController@welcome');
 Route::post('/', 'MainController@userlogin');
 Route::get('users/{username}', 'MainController@displayUser')->name('users');
