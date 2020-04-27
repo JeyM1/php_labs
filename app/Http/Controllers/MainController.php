@@ -49,13 +49,14 @@ class MainController extends Controller {
         $curr_user = DB::table('users')->where('username', $username)->first();
 
         if($type == "Login") {
-            // TODO: check if login and pass is true, save total entries, increment for 1
+            // check if login and pass is true, save total entries, increment for 1
             if(!$curr_user) {
                 // error - no such user in DB
                 return view('welcome', [
                     'login_failed' => MainController::$login_failures['username_not_exist']
                     ]);
             }
+            // password incorrect
             if(!Hash::check($password, $curr_user->password)) {
                 return view('welcome', [
                     'login_failed' => MainController::$login_failures['password_dont_match']
@@ -73,20 +74,21 @@ class MainController extends Controller {
                     'username' => $username,
                     'password' => Hash::make($password)
                 ]);
-
-               $params['just_registered'] = true;
+                $params['entries'] = 1;
+                $params['just_registered'] = true;
             } else {
                 return view('welcome', [
                     'registration_failed' => MainController::$registration_failures['already_exists']
                     ]);
             }
         } else abort(403, 'Unauthorized action.');
+        
         $params['logged_in'] = true;
         return redirect()->route('users', ['username' => $username])->with('params', $params);
     }
 
     public function displayUser($username) {
-        // check, user logged in?, just registered?
+        // check, user logged in?, just registered?, entries if logged in
         $params = session()->get('params');
 
         // if user not logged in, check that username
