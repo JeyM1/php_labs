@@ -17,7 +17,6 @@
         <div>
             <p>Password: </p>
             <input type="password" name="password" minlength="6" required>
-        
         </div>
     </div>  
     <div class="submit-btns">
