@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 
 
-
 class MainController extends Controller {
     // error handling
     static $login_failures = [
@@ -28,7 +27,7 @@ class MainController extends Controller {
     }
 
     public function userlogin(Request $request) {
-        $input = $request->all();
+        $input = $request->post();
         if(!isset($input['submit'])) {
             abort(403, 'Unauthorized action.');
         }
@@ -56,8 +55,8 @@ class MainController extends Controller {
                     'login_failed' => MainController::$login_failures['username_not_exist']
                     ]);
             }
-            // password incorrect
             if(!Hash::check($password, $curr_user->password)) {
+                // password incorrect
                 return view('welcome', [
                     'login_failed' => MainController::$login_failures['password_dont_match']
                     ]);
